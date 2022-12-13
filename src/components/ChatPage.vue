@@ -6,7 +6,7 @@
                   <v-navigation-drawer permanent location="left" class="drawer">
                       <template v-slot:prepend>
                           <v-list-item lines="one" style="float: inline-start;">Pesan Terakhir</v-list-item>
-                          <v-list-item lines="one" style="float: inline-end;">Logout</v-list-item>
+                          <v-list-item lines="one" style="float: inline-end;" @click="logout">Logout</v-list-item>
                       </template>
                       <v-divider></v-divider>
                       <template v-slot:append>
@@ -78,6 +78,9 @@ export default {
                 const stringified = doc.data()
                 this.riwayat.push(stringified)
             });
+        },
+        logout(){
+            this.$router.push('/')
         }
     },
 }
