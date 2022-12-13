@@ -19,7 +19,7 @@
                       </template>
                   </v-navigation-drawer>
                   <v-main style="height:100%" class="container">
-                    <router-view :key="$route.fullPath"></router-view>
+                    <router-view></router-view>
                   </v-main>
               </v-layout>
           </v-card>
